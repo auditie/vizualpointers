@@ -1,0 +1,50 @@
+@import './styles/colors.scss';
+
+#header {
+    border-bottom: 1px solid black;
+    margin-bottom: 20px;
+
+    h3, ul {
+        margin-bottom: 5px;
+    }
+
+
+
+    .header__row {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    .headerNav {
+        padding-left: 0;
+        display: flex;
+        flex-direction: row;
+        gap: 25px;
+
+
+        li {
+            list-style-type: none;
+
+            a {
+                text-decoration: none;
+                color: black;
+            }
+        }
+    }
+}
+
+footer {
+    .footerDiv {
+        margin-top: 20px;
+        background-color: $primary-green;
+        height: 25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .footerText {
+        text-align: center;
+        font-size: 10px;
+    }
+}

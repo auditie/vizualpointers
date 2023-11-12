@@ -1,0 +1,67 @@
+#aboutPage {
+    p {
+        font-size: .9rem;
+    }
+
+    h1 {
+        font-size: 1.6rem;
+        font-weight: 400;
+        margin-top: 0;
+    }
+
+    #aboutIntro {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        border-bottom: 1px solid black;
+        padding-bottom: 30px;
+
+        #aboutImg {
+            height: 30vh;
+            width: 40%;
+            background-color: grey;
+        }
+
+        #aboutText {
+            width: 55%;
+        }
+    }
+
+    #highlightSection {
+        padding-top: 30px;
+        .bannerImg {
+            width: 100%;
+            height: 27vh;
+            background-color: grey;
+            margin-bottom: 30px;
+        }
+
+        #splitAbout {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-bottom: 60px;
+
+            #billy, #peach {
+                width: 38%;
+
+                h2 {
+                    font-size: 1.3rem;
+                    font-weight: 400;
+                }
+
+                .peachPhoto {
+                    height: 35vh;
+                    margin-top: 28px;
+                    background-color: grey;
+                }
+
+                .billyPhoto {  
+                    height: 35vh;
+                    margin-top: 28px;
+                    background-color: grey;
+                }
+            }
+        }
+    }
+}

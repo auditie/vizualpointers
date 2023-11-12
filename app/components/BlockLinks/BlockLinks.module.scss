@@ -1,0 +1,17 @@
+.blockLink {
+    a {
+        text-decoration: none;
+    }
+
+    &__title {
+        color: black;
+        font-size: 1rem;
+        margin-top: 0;
+    }
+
+    &__img {
+        height: 180px;
+        width: 25vw;
+        background-color: gray;
+    }
+}

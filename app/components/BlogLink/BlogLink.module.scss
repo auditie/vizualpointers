@@ -1,0 +1,33 @@
+.blogLink {
+    padding: 5px 0 5px 0;
+    width: 28%;
+    margin-bottom: 40px;
+
+    @media screen and (max-width: 705px) {
+        width: 40%;
+    }
+
+    @media screen and (max-width: 450px) {
+        width: 100%;
+    }
+
+    h3 {
+        color: black;
+        margin-top: 0;
+        font-weight: 400;
+    }
+
+    a {
+        text-decoration: none;
+    }
+    p {
+        color: black;
+        font-size: .75rem;
+    }
+
+    &__img {
+        height: 240px;
+        width: 100%;
+        background-color: grey;
+    }
+}
