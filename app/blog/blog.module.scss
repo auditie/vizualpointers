@@ -1,3 +1,5 @@
+@import '../styles/colors.scss';
+
 #blogPage {
     #blogGrid {
         display: flex;
@@ -7,6 +9,25 @@
 
         @media screen and (max-width: 450px) {
             flex-direction: column;
+        }
+    }
+
+    #moreBlogs {
+        display: flex;
+        justify-content: center;
+        .loadMore {
+            width: 100px;
+            border: none;
+            border-top: 1px solid $black;
+            border-bottom: 1px solid $black;
+            background-color: white;
+            transition: background-color ease 0.4s;
+            
+            &:hover {
+                border: 1px solid white;
+                color: $black;
+                background-color: $teal;
+            }
         }
     }
 }

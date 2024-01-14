@@ -1,3 +1,5 @@
+@import '../styles/colors.scss';
+
 #aboutPage {
     p {
         font-size: .9rem;
@@ -16,14 +18,53 @@
         border-bottom: 1px solid black;
         padding-bottom: 30px;
 
+        @media screen and (max-width: 680px) {
+            flex-direction: column;
+        }
+
         #aboutImg {
-            height: 30vh;
-            width: 40%;
-            background-color: grey;
+            height: 40vh;
+            width: 45%;
+            background-image: url('../../public/images/dogs/christmas-bandanas.jpg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+            @media screen and (max-width: 680px) {
+                width: 100%;
+            }
         }
 
         #aboutText {
-            width: 55%;
+            width: 48%;
+
+            @media screen and (max-width: 680px) {
+                width: 100%;
+                margin-top: 10px;
+            }
+
+            #aboutTitle {
+                display: flex;
+                flex-direction: row;
+
+                h1 {
+                    font-size: 1.6rem;
+                    display: inline;
+                    font-weight: 400;
+                    width: 30%;
+                    padding-right: 10px;
+                    @media screen and (max-width: 500px) {
+                        width: 50%;
+                    }
+                }
+
+                .line {
+                    margin-top: 12px;
+                    border-bottom: 1px solid black;
+                    height: 5px;
+                    width: 100%;
+                }
+            }
         }
     }
 
@@ -42,8 +83,17 @@
             justify-content: space-between;
             margin-bottom: 60px;
 
+            @media screen and (max-width: 680px) {
+               flex-direction: column;
+            }
+
             #billy, #peach {
                 width: 38%;
+
+                @media screen and (max-width: 680px) {
+                    width: 100%;
+                    margin-top: 20px;
+                }
 
                 h2 {
                     font-size: 1.3rem;
@@ -51,15 +101,28 @@
                 }
 
                 .peachPhoto {
-                    height: 35vh;
+                    height: 40vh;
                     margin-top: 28px;
-                    background-color: grey;
+                    background-image: url('../../public/images/peach/peach.jpg');
+                    background-position: 0% 80%;
+                    background-repeat: no-repeat;
+                    background-size: cover;
                 }
 
                 .billyPhoto {  
-                    height: 35vh;
+                    height: 40vh;
                     margin-top: 28px;
-                    background-color: grey;
+                    background-image: url('../../public/images/billy/billy.jpg');
+                    background-position: 0% 80%;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                }
+            }
+
+            #peach {
+                @media screen and (max-width: 680px) {
+                    border-bottom: 1px solid $black;
+                    padding-bottom: 30px;
                 }
             }
         }

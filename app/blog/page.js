@@ -30,6 +30,11 @@ export default function BlogPage() {
                     <BlogLink />
                     <BlogLink />
                 </div>
+                <div id={style.moreBlogs}>
+                    <button className={style.loadMore}>
+                        load more
+                    </button>
+                </div>
             </div>
         </div>
     )

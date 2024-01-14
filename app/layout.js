@@ -11,6 +11,8 @@ import {
 
 const inter = Inter({ subsets: ['latin'] })
 
+import logo from '../public/images/logos/vizualpointers-logo.svg';
+
 export const metadata = {
   title: 'vizual pointers',
   description: 'home site for vizual pointers',
@@ -26,7 +28,7 @@ export default function RootLayout({ children }) {
     // {href: '/', title: 'home'},
     {href: '/about', title: 'about'},
     {href: '/blog', title: 'blog'},
-    {href:'/fun', title: 'fun'}
+    {href:'/other', title: 'other'}
   ];
 
   return (
@@ -37,6 +39,7 @@ export default function RootLayout({ children }) {
                 <Row className={style.header__row}>
                     <Col className={style.header__col}>
                         <h3>vizual pointers</h3>
+                        {/* <img src={logo} id={style.logo} /> */}
                     </Col>
                     <Col className={style.header__col}>
                         <ul className={style.headerNav}>

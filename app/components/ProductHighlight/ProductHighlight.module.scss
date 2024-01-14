@@ -1,0 +1,29 @@
+.productHighlight {
+    width: 25%;
+
+    .productImg {
+        height: 150px;
+        width: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+        font-weight: 500;
+
+        a {
+            text-decoration: none;
+            color: black;
+
+            &:hover {
+                color: pink;
+            }
+        }
+    }
+
+    p {
+        font-size: .8rem;
+    }
+}
