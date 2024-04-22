@@ -1,0 +1,10 @@
+@import './typography';
+@import './colors';
+@import './vars';
+@import './base';
+@import './mixins';
+
+body {
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+}

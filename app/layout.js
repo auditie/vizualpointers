@@ -2,12 +2,16 @@ import './globals.css'
 import style from './layout.module.scss';
 import { Inter } from 'next/font/google';
 import Link from 'next/link';
+import Head from 'next/head';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 import {
   Container,
   Col,
   Row
 } from 'react-bootstrap';
+
+import instagramLogo from '../public/images/icons/instagram-white.png';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -26,22 +30,39 @@ export default function RootLayout({ children }) {
 
   const links = [
     // {href: '/', title: 'home'},
-    {href: '/about', title: 'about'},
-    {href: '/blog', title: 'blog'},
-    {href:'/other', title: 'other'}
+    {href: '/about', title: 'ABOUT'},
+    {href: '/journal', title: 'JOURNAL'},
+    {href:'/fun', title: 'FUN'},
+    {href: '/contact', title: 'CONTACT'}
   ];
+
+  const footerLinks = [
+    {href: '/about', title: 'ABOUT'},
+    {href: '/journal', title: 'JOURNAL'},
+    {href: '/contact', title: 'CONTACT'},
+    {href:'/fun', title: 'FAVORITE PRODUCTS'},
+  ]
+  const footerLinks2 = [
+    {href:'/fun/portfolio', title: 'PORTFOLIO'},
+    {href: 'https://www.akc.org/', title: 'AKC'},
+    {href: 'https://northamericadivingdogs.com/', title: 'NADD ORG'},
+    {href: 'https://www.barnhunt.com/index.html', title: 'BARNHUNT'},
+  ]
 
   return (
     <html lang="en">
+      <Head>
+        {/* <link rel="stylesheet" href="https://use.typekit.net/nvv3qbq.css" /> */}
+        <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet"></link>
+      </Head>
       <body className={inter.className}>
         <header>
-          <Container id={style.header}>
-                <Row className={style.header__row}>
-                    <Col className={style.header__col}>
+          <div id={style.header}>
+                <div className={style.header__row}>
+                    <div className={style.header__col}>
                         <h3>vizual pointers</h3>
-                        {/* <img src={logo} id={style.logo} /> */}
-                    </Col>
-                    <Col className={style.header__col}>
+                    </div>
+                    <div className={style.header__col}>
                         <ul className={style.headerNav}>
                             {links.map(({ href, title}) => (
                               <li key={href}>
@@ -49,15 +70,45 @@ export default function RootLayout({ children }) {
                               </li>
                             ))}
                         </ul>
-                    </Col>
-                </Row>
-            </Container>
+                    </div>
+                </div>
+            </div>
         </header>
         <main>{children}</main>
         <footer>
           <Container fluid className={style.footerDiv}>
-            <Row >
-              <Col className={style.footerText}><p>Copyright {getCurrentYear()} &copy; Vizual Pointers</p></Col>
+            <Row className={style.topFooter}>
+              <Col>
+                <h5>VIZUAL POINTERS</h5>
+                <div className={style.socialLinks}>
+                  {/* <img src={instagramLogo} alt='instagram logo' className={style.socialIcon} /> */}
+                </div>
+              </Col>
+              <Col>
+                <Row className={style.footerColumns}>
+                  <Col>
+                      <ul>
+                        {footerLinks.map(({href, title}) => (
+                          <li key={href}>
+                            <Link href={href}>{title}</Link>
+                          </li>
+                        ))}
+                      </ul>
+                  </Col>
+                  <Col>
+                      <ul>
+                        {footerLinks2.map(({href, title}) => (
+                          <li key={href}>
+                            <Link href={href}>{title}</Link>
+                          </li>
+                        ))}
+                      </ul>
+                  </Col>
+                </Row>
+              </Col>
+            </Row>
+            <Row className={style.bottomFooter}>
+              <Col className={style.footerText}><p>COPYRIGHT {getCurrentYear()} &copy; VIZUAL POINTERS</p></Col>
             </Row>
           </Container>
         </footer>

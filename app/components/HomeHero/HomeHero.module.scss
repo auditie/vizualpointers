@@ -1,8 +1,11 @@
 #heroImage {
-    background-image: url('../../../public/images/heroimages/homepage-hero.jpg');
+    background-image: url('../../../public/images/heroimages/homepage.jpg');
     background-repeat: no-repeat;
-    background-position: 60% 55%;
+    background-position: 30% 45%;
     background-size: cover;
     height: 50vh;
     width: 100%;
+    z-index: 0;
+    position: absolute;
+    top: 0;
 }
