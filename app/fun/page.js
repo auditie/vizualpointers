@@ -46,7 +46,7 @@ export default function Fun() {
                 <div className={style.productsContainer}>
                     <div className={style.products}>
                         {products.map((product) => (
-                            <div className={style.product}>
+                            <div className={style.product} key={product.name}>
                                 {/* <div className={style.productImage} style={{backgroundImage: `url(${product.img})`}}></div> */}
                                 <p>{product.name}</p>
                                 <a href={product.href} target="_blank">LINK</a>
