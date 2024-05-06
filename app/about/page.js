@@ -1,6 +1,16 @@
+"use client";
+
 import style from './about.module.scss';
+import { useEffect } from 'react';
+
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const AboutPage = () => {
+    useEffect(() => {
+        AOS.init();
+    }
+    , []);
 
     const peachAkcTitles = [
         {title: 'TRICK DOG NOVICE - TKN', date: 'WIP'},
@@ -20,10 +30,10 @@ const AboutPage = () => {
 
     return (
         <div id={style.aboutPage}>
-            <div className={style.aboutHero}>
+            <div className={style.aboutHero} data-aos='fade-up' data-aos-duration='1000'>
                 <h1>ABOUT US</h1>
             </div>
-            <div className={style.aboutIntro}>
+            <div className={style.aboutIntro} data-aos='fade-up' data-aos-duration='1000'>
                 <div>
                     <div>
                         <p>
@@ -34,7 +44,7 @@ const AboutPage = () => {
                     </div>
                 </div>
             </div>
-            <div className={style.peachProfile}>
+            <div className={style.peachProfile} data-aos='fade-up' data-aos-duration='1000'>
                 <div className={style.dogRow}>
                     <div className={style.peachLeft}>
                         <p className={style.aboutText}>
@@ -43,7 +53,7 @@ const AboutPage = () => {
                             <br /> <br />
                             Peach has a really high working drive, she loves to train, and loves to be as close to as as possible on the couch. She also has a spicy personality and is so fun to be around!
                         </p>
-                        <div className={style.peachTitles}>
+                        <div className={style.peachTitles} data-aos="fade-right" data-aos-duration='1000'>
                             <h3 className={style.akcHeader}>AKC TITLES</h3>
                             {peachAkcTitles.map((title, index) => (
                                 <div className={style.akcTitle} key={index}>
@@ -58,7 +68,7 @@ const AboutPage = () => {
                     </div>
                 </div>
             </div>
-            <div className={style.billyProfile}>
+            <div className={style.billyProfile} data-aos='fade-up' data-aos-duration='1000'>
                 <div className={style.dogRow}>
                     <div className={style.billyLeft}>
                         <div className={style.billyImage}></div>
@@ -70,7 +80,7 @@ const AboutPage = () => {
                             <br /> <br />
                             He has a love for fetch, training, and playing with his sister Peach.
                         </p>
-                        <div className={style.billyTitles}>
+                        <div className={style.billyTitles} data-aos='fade-left' data-aos-duration='1000'>
                             <h3 className={style.akcHeader}>AKC TITLES</h3>
                                 {billyAkcTitles.map((title, index) => (
                                     <div className={style.akcTitle} key={index}>

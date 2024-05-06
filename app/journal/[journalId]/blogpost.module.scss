@@ -1,0 +1,93 @@
+@import "../../styles/mixins";
+@import "../../styles/_colors.scss";
+.blogPost {
+    .blogPostHero {
+        background-image: url('../../../public/images/heroimages/blogpage-hero.jpg');
+        background-repeat: no-repeat;
+        background-position: 30% 50%;
+        background-size: cover;
+        height: 300px;
+        width: 100%;
+        z-index: 0;
+        position: absolute;
+        top: 0;
+
+        h1 {
+            position: absolute;
+            bottom: 0;
+            color: white;
+            text-transform: uppercase;
+            @include large-container;
+        }
+    }
+
+    .introText {
+        font-weight: 900;
+        font-size: 1.30rem;
+        text-transform: uppercase;
+    }
+
+    .blogPostContent {
+        padding-top: 40px;
+        padding-bottom: 40px;
+
+        @include large-container;
+
+        .content {
+            a {
+                color: $orange;
+
+                &:hover {
+                    color: $dark-teal;
+                }
+            }
+        }
+    }
+
+    .blogGallery {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 40px 80px;
+        gap: 50px;
+
+        @media  screen and (max-width: 640px) {
+            padding: 40px 40px;
+        }
+
+        @media screen and (min-width: 1200px) {
+            padding: 40px 200px;
+        }
+
+        .galleryPhoto {
+            width: 300px;
+            height: 200px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+
+            @media screen and (max-width: 640px) {
+                width: 100%;
+                height: 300px;
+            }
+        }
+    }
+
+    .return {
+        @include large-container;
+        margin-bottom: 40px;
+        a {
+            color: white;
+            background-color: $dark-teal;
+            padding: 10px 20px;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: 600;
+
+            &:hover {
+                background-color: $teal;
+                color: $dark-teal;
+                cursor: pointer;
+            }
+        }
+    }
+}

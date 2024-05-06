@@ -1,5 +1,21 @@
 @mixin large-container {
-    // max-width: 1200px;
-    // margin: 0 auto;
-    padding: 10px 80px;
+    padding-left: 80px;
+    padding-right: 80px;
+
+    @media screen and (max-width: 640px) {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        padding-left: 200px;
+        padding-right: 200px;
+    }
+}
+
+@mixin intro-text {
+    .introText {
+        font-weight: 900;
+        font-size: 1.30rem;
+    }
 }

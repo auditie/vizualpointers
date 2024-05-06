@@ -1,20 +1,122 @@
+"use client";
+
 import style from './Contact.module.scss';
+import React, { useState, useEffect } from 'react';
+import ReCAPTCHA from 'react-google-recaptcha';
+// import emailjs from '@emailjs/browser';
+
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 export default function Contact() {
+    useEffect(() => {
+        AOS.init();
+    }
+    , []);
+
+    const [formData, setFormData] = useState({
+        name: '',
+        email: '',
+        message: ''
+    });
+
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [stateMessage, setStateMessage] = useState(null);
+
+    const [isCapchaValid, setIsCapchaValid] = useState(false);
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData(prevState => ({
+            ...prevState,
+            [name]: value
+        }));
+    };
+
+    const handleCaptchaChange = (value) => {
+        console.log('Captcha value:', value);
+        setIsCapchaValid(true);
+    };
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        console.log(formData);
+
+        if(!isValidEmail(formData.email)) {
+            alert('Please enter a valid email address');
+            return;
+        }
+        // hanlde form submission
+    };
+
+    const isValidEmail = (email) => {
+        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    };
+
+    const sendEmail = (e) => {
+        e.persist();
+        e.preventDefault();
+        setIsSubmitting(true);
+
+        emailjs
+            .sendForm(
+                process.env.REACT_APP_SERVICE_ID,
+                process.env.REACT_APP_TEMPLATE_ID,
+                e.target,
+                process.env.REACT_APP_PUBLIC_KEY
+            )
+            .then(
+                (result) => {
+                    setStateMessage('Message sent successfully!');
+                    setIsSubmitting(false);
+                    setTimeout(() => {
+                        setStateMessage(null);
+                    }, 5000);
+                },
+                (error) => {
+                    setStateMessage('Failed to send message. Please try again later.');
+                    setIsSubmitting(false);
+                    setTimeout(() => {
+                        setStateMessage(null);
+                    }, 5000);
+                }
+            );
+        e.target.reset();
+    }
 
     return (
         <div id={style.contactPage}>
-            <div className={style.contactHero}>
+            <div className={style.contactHero} data-aos='fade-up' data-aos-duration='1000'>
                 <h1>CONTACT US</h1>
             </div>
-            <div className={style.contactForm}>
-                <form className={style.form}>
-                    <input type="text" id="name" name="name" placeholder='NAME' required></input>
-                    <input type="email" id="email" name="email" placeholder='EMAIL' required></input>
-                    <textarea id="message" name="message" placeholder='MESSAGE' required></textarea>
-                    <button type="submit">Submit</button>
-
-                    {/* add CAPTCHA to protect from spam submissions */}
+            <div className={style.contactForm} data-aos='fade-up' data-aos-duration='1000'>
+                <form className={style.form} onSubmit={sendEmail}>
+                    <input 
+                        type="text" 
+                        id="name" 
+                        name="name" 
+                        placeholder='NAME' 
+                        required 
+                    />
+                    <input 
+                        type="email"
+                        id="email" 
+                        name="email" 
+                        placeholder='EMAIL' 
+                        required
+                    />
+                    <textarea 
+                        id="message" 
+                        name="message" 
+                        placeholder='MESSAGE' 
+                        required 
+                    />
+                    <ReCAPTCHA
+                        sitekey="process.env.REACT_APP_RECAPTCHA_SITE_KEY"
+                        onChange={handleCaptchaChange}
+                    />
+                    <button type="submit" value="Send" disabled={isSubmitting}>Submit</button>
+                    {stateMessage && <p>{stateMessage}</p>}
                 </form>
             </div>
         </div>

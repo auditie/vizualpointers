@@ -1,4 +1,5 @@
 @import '../styles/colors.scss';
+@import '../styles/mixins.scss';
 
 #aboutPage {
     font-family: "Outfit", sans-serif;
@@ -23,19 +24,24 @@
         h1 {
             position: absolute;
             bottom: 0;
-            left: 80px;
             color: white;
+            font-size: 2.8rem !important;
+            @include large-container;
         }
     }
 
     .aboutIntro {
-        padding: 20px 80px;
+        padding-top: 40px;
+        padding-bottom: 40px;
         border-bottom: 1.5px solid black;
+        @include large-container;
     }
 
     .aboutText {
         margin-bottom: 50px;
     }
+
+    @include intro-text;
 
     .peachProfile {
         border-bottom: 1.5px solid black;
@@ -50,6 +56,14 @@
                 order: 2;
                 border-right: none;
                 border-top: 1.5px solid black;
+            }
+
+            @media screen and (max-width: 640px) {
+                padding: 40px;
+            }
+
+            @media screen and (min-width: 1200px) {
+                padding-left: 200px;
             }
         }
 
@@ -110,7 +124,7 @@
 
         .billyRight {
             color: white;
-            background-color: $black;
+            background-color: $dark-teal;
             width: 50%;
             padding: 40px 80px;
             border-left: 1.5px solid black;
@@ -121,6 +135,13 @@
 
             @media screen and (max-width: 755px) {
                 width: auto;
+            }
+
+            @media screen and (max-width: 640px) {
+                padding: 40px;
+            }
+            @media screen and (min-width: 1200px) {
+                padding-right: 200px;
             }
         }
 

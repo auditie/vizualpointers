@@ -1,62 +1,49 @@
+"use client";
+
 import style from './blog.module.scss';
+import Link from 'next/link';
+import { useEffect } from 'react';
 
-// import blogPosts from '../data/blogposts';
-
-import {
-    Container,
-    Col,
-    Row
-} from 'react-bootstrap';
+import blogPosts from '../data/blogposts';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 export default function BlogPage() {
-    const blogPosts = [
-        {
-            title: 'designing/building the site',
-            date: 'november __, 2023',
-            content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-        },
-        {
-            title: 'launching the site',
-            date: 'march 13, 2024',
-            content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-        },
-        {
-            title: 'fort worth show',
-            date: 'march 24, 2024',
-            content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-        },
-    ];
-    // create an empty array with state for the 6 most recent blog posts
+        
+    useEffect(() => {
+        AOS.init();
+    }
+    , []);
 
-    //create a function that calls from the db 
-        // GET request
-            // store response in a variable
-            // set the array of blogs state to 6 most recent blogs
-        // handle error
-
-    // useEffect
-        // run functions when page loads    
-
-    // const journalPosts = blogPosts;
-    // console.log(blogPosts)
 
     return (
         <div id={style.blogPage}>
-            <div className={style.blogHero}>
+            <div className={style.blogHero} data-aos='fade-up' data-aos-duration='1000'>
                 <h1>JOURNAL</h1>
             </div>
-            <div className={style.blogIntro}>
+            <div className={style.blogIntro} data-aos='fade-up' data-aos-duration='1000'>
                 <p>
                     <span className={style.introText}>THE JOURNAL, </span>
                     to Vizual Pointers! We’re two pups living in Dallas, TX living with our two loving pawrents. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
                 </p>
             </div>
-            <div id={style.blogPosts}>
+            <div id={style.blogPosts} data-aos='fade-up' data-aos-duration='1000'>
                 {blogPosts.map((post, index) => {
-                    <div className={style.post}>
-                        <h3>{post.title}</h3>
-                        <p>{post.date}</p>
-                    </div>
+                    return (
+                        <div className={style.post} key={post.journalId}>
+                            {/* took out passHref from here, was getting a react issue */}
+                            <Link href={`/journal/${post.journalId}`} passHref className={style.postLink}>
+                                <p className={style.number}>0{post.journalId}</p>
+                                <div className={style.content}>
+                                    <h3 className={style.title}>{post.title}</h3>
+                                    <p className={style.summary}>
+                                        {post.summary}
+                                    </p>
+                                </div>
+                                <p className={style.date}>{post.date}</p>
+                            </Link>
+                        </div>
+                    )
                 })}
             </div>
         </div>
