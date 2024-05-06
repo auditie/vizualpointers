@@ -46,7 +46,7 @@ export default function Home() {
             <h2>RECENT JOURNALS</h2>
             <div className={styles.postList}>
               {recentPosts.map((post, index) => (
-                  <Link href={`/journal/${post.journalId}`} passHref className={styles.postLink}>
+                  <Link href={`/journal/${post.journalId}`} passHref className={styles.postLink} key={post.journalId}>
                     <div key={post.journalId} className={styles.post}>
                       <p className={styles.number}>0{post.journalId}</p>
                       <h3 className={styles.title}>{post.title.toUpperCase()}</h3>
