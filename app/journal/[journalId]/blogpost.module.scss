@@ -17,15 +17,12 @@
             bottom: 0;
             color: white;
             text-transform: uppercase;
+            font-size: 3rem !important;
             @include large-container;
         }
     }
 
-    .introText {
-        font-weight: 900;
-        font-size: 1.30rem;
-        text-transform: uppercase;
-    }
+    @include intro-text;
 
     .blogPostContent {
         padding-top: 40px;

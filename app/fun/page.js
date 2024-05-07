@@ -52,12 +52,9 @@ export default function Fun() {
             <div className={style.funHero} data-aos='fade-up' data-aos-duration='1000'>
                 <h1>FUN & <br />FAVORITES</h1>
             </div>
-            <div className={style.funIntro} data-aos='fade-up' data-aos-duration='1000'>
-                <p>
-                    <span className={style.introText}>WELCOME, </span>
-                    to our fun page! Here you will find our favorite products, spots, and more. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                </p>
-            </div>
+            {/* <div className={style.funIntro} data-aos='fade-up' data-aos-duration='1000'>
+
+            </div> */}
             <div className={style.favoriteSpots} data-aos='fade-up' data-aos-duration='1000'>
                 <h2>FAVORITE SPOTS</h2>
                 <Tabs

@@ -5,9 +5,9 @@
     font-family: "Outfit", sans-serif;
     font-optical-sizing: auto;
 
-    .introText {
-        font-weight: 900;
-        font-size: 1.35rem;
+    h3 {
+        font-size: 1.3rem;
+        font-weight: 600;
     }
     
     .aboutHero {
@@ -161,6 +161,37 @@
 
         @media screen and (max-width: 755px) {
             flex-direction: column;
+        }
+    }
+
+    .gallery {
+        border-top: 1.5px solid black;
+        overflow-x: auto;
+        .container {
+            display: inline-flex;
+            .galleryImg {
+                display: flex;
+                align-items: flex-end;
+                border-right: 1.5px solid black;
+                width: 350px;
+                height: 400px;
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+
+                @media screen and (max-width: 640px) {
+                    width: 80vw;
+                    height: 400px;
+                }
+            }
+        }
+
+        .container::-webkit-scrollbar {
+            width: 12px;
+        }
+
+        &::-webkit-scrollbar-track {
+            background: pink;
         }
     }
 }

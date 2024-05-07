@@ -2,6 +2,7 @@
 @import '../styles/mixins.scss';
 
 #blogPage {
+    margin-bottom: 20vh;
     .blogHero {
         background-image: url('../../public/images/heroimages/blogpage-hero.jpg');
         background-repeat: no-repeat;
@@ -19,6 +20,7 @@
             left: 80px;
             color: white;
             text-transform: uppercase;
+            font-size: 3rem !important;
 
             @media  screen and (max-width: 640px) {
                 left: 40px; 
@@ -46,6 +48,9 @@
         flex-direction: column;
 
         .post {
+            &:last-child {
+                border-bottom: 1.5px solid black;
+            }
             .postLink {
                 text-decoration: none;
                 color: black;
