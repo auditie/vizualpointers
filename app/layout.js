@@ -40,10 +40,10 @@ export default function RootLayout({ children }) {
     {href: '/about', title: 'ABOUT'},
     {href: '/journal', title: 'JOURNAL'},
     {href: '/contact', title: 'CONTACT'},
-    {href:'/fun', title: 'FAVORITE PRODUCTS'},
+    {href:'/fun', title: 'FAVORITES'},
   ]
   const footerLinks2 = [
-    {href:'/fun/portfolio', title: 'PORTFOLIO'},
+    {href:'/fun', title: 'PORTFOLIO'},
     {href: 'https://www.akc.org/', title: 'AKC'},
     {href: 'https://northamericadivingdogs.com/', title: 'NADD ORG'},
     {href: 'https://www.barnhunt.com/index.html', title: 'BARNHUNT'},
