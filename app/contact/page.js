@@ -33,7 +33,7 @@ export default function Contact() {
         emailjs
             .sendForm(
                 process.env.NEXT_PUBLIC_SERVICE_ID,
-                process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID ,
+                process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
                 e.target,
                 process.env.NEXT_PUBLIC_USER_ID
             )
