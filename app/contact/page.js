@@ -47,6 +47,7 @@ export default function Contact() {
                 },
                 (error) => {
                     setStateMessage('Failed to send message. Please try again later.');
+                    console.log('Error', error);
                     setIsSubmitting(false);
                     setTimeout(() => {
                         setStateMessage(null);
