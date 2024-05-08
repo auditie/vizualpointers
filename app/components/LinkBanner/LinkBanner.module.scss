@@ -1,11 +1,18 @@
+@import "../../styles/colors.scss";
+@import "../../styles/mixins.scss";
+
 .linkBanner {
     .linkRow {
-        background-color: #242222;
+        background-color: $dark-teal;
         color: white;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        padding-top: 20px;
+        padding-bottom: 20px;
         padding: 20px 80px;
+
+
 
         @media screen and (max-width: 715px) {
             flex-direction: column;
@@ -17,7 +24,13 @@
             @media screen and (max-width: 715px) {
                 border-bottom: 1.5px solid white;
                 width: 100%;
-                // padding: 20px 0;
+
+                &:last-child {
+                    border-bottom: none;
+                }
+                &:hover {
+                    background-color: $teal;
+                }
             }
             a {
                 font-weight: 600;
@@ -25,13 +38,18 @@
                 text-decoration: none;
                 font-size: 1rem;
                 &:hover {
-                    color: #B1DAD4;
+                    color: $teal;
                 }
 
                 @media screen and (max-width: 715px) {
-                    font-size: 1.3rem;
+                    font-size: 1rem;
                     display: block;
-                    padding: 40px 80px;
+                    padding: 30px 40px;
+                    color: white;
+
+                    &:hover {
+                        color: $dark-teal;
+                    }
                 }
             }
 

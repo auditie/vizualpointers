@@ -9,7 +9,7 @@ import {
 
 export default function LinkBanner() {
     const links = [
-        {href: '/portfolio', title: 'PORTFOLIO'},
+        // {href: '/portfolio', title: 'PORTFOLIO'},
         {href: '/fun', title: 'FAVORITES'},
         {href: 'https://northamericadivingdogs.com/', title: 'NADD ORG'},
         {href: 'https://www.gspca.org/', title: 'GSPCA'},

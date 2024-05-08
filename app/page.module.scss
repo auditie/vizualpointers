@@ -4,7 +4,15 @@
 @import './styles/mixins.scss';
 
 #homePage {
-    margin-top: 490px;
+    margin-top: 570px;
+
+    @media screen and (max-width: 640px) {
+        margin-top: 490px;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
     .welcomeContainer {
         display: flex;
         flex-direction: row;
@@ -18,13 +26,6 @@
             display: inline;
             font-weight: 400;
         }
-
-        .lineBreak {
-            margin-top: 30px;
-            border-bottom: 1px solid black;
-            height: 5px;
-            width: 100%;
-        }
     }
 
     #intro {
@@ -32,11 +33,11 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        margin-bottom: 40px;
+        margin-bottom: 100px;
 
         .welcome {
             font-weight: 800;
-            font-size: 1.3rem;
+            font-size: 2.8rem;
         }
 
         p {
@@ -48,27 +49,81 @@
     #recentPosts {
 
         h2 {
-            font-size: 1.4rem;
-            padding: 10px 80px 20px 80px;
+            padding-top: 20px;
+            padding-bottom: 20px;
             border-bottom: 1.5px solid black;
+            border-top: 1.5px solid black;
             margin-bottom: 0;
+            @include large-container;
         }
 
         .postList {
+            .postLink {
+                text-decoration: none;
+                color: black;
+            }
             .post {
                 display: flex;
                 flex-direction: row;
                 justify-content: space-between;
                 border-bottom: 1.5px solid black;
-                padding: 40px 80px 60px 80px;
+                padding-top: 40px;
+                padding-bottom: 40px;
+                position: relative;
+                @include large-container;
+
+                &:hover {
+                    background-color: $teal;
+                }
+
+                @media screen and (max-width: 640px) {
+                    flex-direction: column;
+                    height: auto;
+                }
+
                 h3, p {
                     margin: 0;
+                }
+
+                .number {
+                    font-size: 1.6rem;
+                    line-height: 1.6rem;
+                    font-weight: 300;
+                }
+
+                .title {
+                    font-size: 1.5rem;
+                    font-weight: 600;
+                    text-transform: uppercase;
+                }
+
+                .number, .title, .date {
+                    width: 33%;
+                    text-align: left;
+
+                    @media screen and (max-width: 640px) {
+                        width: 100%;
+                    }
+                }
+
+                .date {
+                    text-align: right;
+                    text-transform: uppercase;
+                    font-style: italic;
+
+                    @media  screen and (max-width: 640px) {
+                        position: absolute;
+                        top: 40px;
+                        right: 40px;
+                        font-size: .8rem;
+                    }
                 }
             }
         }
     }
 
     #profileHighlight {
+        border-top: 1.5px solid black;
 
         .profileRow{
             display: flex;
@@ -81,7 +136,9 @@
             }
 
             .profileAbout {
-                padding: 40px 80px 40px 80px;
+                padding-top: 40px;
+                padding-bottom: 40px;
+                @include large-container;
 
                 h2 {
                     margin-bottom: 30px;
@@ -91,6 +148,27 @@
                     color: $orange;
                     font-weight: 800;
                     font-size: 1.2rem;
+                }
+
+                @media screen and (min-width: 1200px) {
+                    padding-right: 40px;
+                    
+                }
+
+                .profileSocials {
+                    display: flex;
+                    flex-direction: row;
+
+                    a {
+                        text-decoration: none;
+                        color: black;
+                        font-size: .9rem;
+
+                        &:hover {
+                            color: $orange;
+                        
+                        }
+                    }
                 }
             }
             .leftCol {
@@ -117,7 +195,7 @@
             height: 100%;
             background-image: url('../public/images/profile-highlight/blue-laska-one.png');
             background-size:cover;
-            background-position: center;
+            background-position: 50% 90%;
             background-repeat: no-repeat;
         }
 

@@ -1,5 +1,13 @@
+@import "../../styles/colors.scss";
 .photoBar {
-    height: 18vh;
+    height: 120px;
     width: 100%;
-    background-color: grey;
+    background-image: url('../../../public/images/heroimages/birds.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    @media screen and (max-width: 640px) {
+        height: 180px;
+    }
 }

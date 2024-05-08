@@ -1,0 +1,40 @@
+@import 'colors';
+@import 'mixins';
+#notFound {
+    .hero {
+        background-image: url('../../public/images/heroimages/blogpage-hero.jpg');
+        background-repeat: no-repeat;
+        background-position: 30% 50%;
+        background-size: cover;
+        height: 300px;
+        width: 100%;
+        z-index: 0;
+        position: absolute;
+        top: 0;
+
+        h1 {
+            position: absolute;
+            bottom: 0;
+            left: 80px;
+            color: white;
+            text-transform: uppercase;
+
+            @media  screen and (max-width: 640px) {
+                left: 40px; 
+            }
+
+            @media  screen and (min-width: 1200px) {
+                left: 200px; 
+            }
+        }
+    }
+
+    .content {
+        @include large-container;
+        padding-top: 40px;
+        font-size: 2rem;
+        font-family: "Outfit", sans-serif;
+        font-optical-sizing: auto;
+        margin-bottom: 50vh;
+    }
+}

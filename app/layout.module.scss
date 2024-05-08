@@ -1,7 +1,18 @@
 @import './styles/colors.scss';
 @import './styles/typography.scss';
 @import './styles/vars.scss';
+@import './styles/mixins.scss';
 
+.body {
+    h1 {
+        font-size: 1.9rem !important;
+        font-weight: 900;
+    }
+
+    h2 {
+        font-weight: 800;
+    }
+}
 
 #header {
     font-family: "Outfit", sans-serif;
@@ -12,11 +23,23 @@
     position: relative;
     color: white;
     padding-top: 20px;
-    margin-bottom: 180px;
+    margin-bottom: 210px;
+
+    @include large-container;
 
     h3 {
-        font-size: 1.7rem;
+        font-size: 1.4rem;
         text-transform: uppercase;
+
+        a {
+            color: white;
+            font-weight: 800;
+            text-decoration: none;
+
+            &:hover {
+                color: $black;
+            }
+        }
 
         @media screen and (max-width: 895px) {
             margin: 0;
@@ -29,7 +52,7 @@
     }
 
     ul {
-        margin-top: 10px;
+        
         bottom: 0;
     }
 
@@ -83,17 +106,34 @@ footer {
             gap: 40px;
         }
 
-        h5 {
+        @include large-container;
+
+        .homeLink {
+            text-decoration: none;
             font-size: 1.5rem;
             margin: 0;
             color: white;
             font-weight: 800;
+            &:hover {
+                color: #242222;
+            }
+        }
+        .socialLinks {
+            display: flex;
+            flex-direction: row;
+
+            .instagramLogo {
+                color: white;
+                &:hover {
+                    cursor: pointer;
+                }
+            }
         }
 
         .footerColumns {
             display: flex;
             flex-direction: row;
-            gap: 10px;
+            gap: 40px;
 
             @media screen and (max-width: 730px) {
                 flex-direction: column;
@@ -121,22 +161,24 @@ footer {
     }
 
     .bottomFooter {
-        border-top: 1.5px solid black;
+        // border-top: 1.5px solid black;
         background-color: $primary-green;
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: left;
         margin-bottom: 0;
     }
     .footerDiv {
         font-family: "Outfit", sans-serif;
         font-optical-sizing: auto;
-        border-top: 1.5px solid black;
+        // border-top: 1.5px solid black;
     }
 
     .footerText {
-        padding: 10px 0;
-        text-align: center;
+        @include large-container;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        text-align: left;
         font-size: 12px;
         font-weight: 600;
         color: #525B53;
