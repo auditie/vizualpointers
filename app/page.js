@@ -57,8 +57,8 @@ export default function Home() {
             </div>
           </div>
         </div>
+        <div className={styles.photoBar} data-aos='fade-up' data-aos-duration='1000'></div>
         <div data-aos='fade-up' data-aos-duration='1000'>
-          <VideoLoop />
           <LinkBanner />
         </div>
         <div id={styles.profileHighlight} data-aos='fade-up' data-aos-duration='1000'>

@@ -32,10 +32,10 @@ export default function Contact() {
 
         emailjs
             .sendForm(
-                process.env.NEXT_PUBLIC_SERVICE_ID,
-                process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
+                SERVICE_ID,
+                EMAILJS_TEMPLATE_ID,
                 e.target,
-                process.env.NEXT_PUBLIC_USER_ID
+                USER_ID
             )
             .then(
                 (result) => {
@@ -90,7 +90,8 @@ export default function Contact() {
             <div className={style.contactHero} data-aos='fade-up' data-aos-duration='1000'>
                 <h1>CONTACT US</h1>
             </div>
-            <div className={style.contactForm} data-aos='fade-up' data-aos-duration='1000'>
+            
+            {/* <div className={style.contactForm} data-aos='fade-up' data-aos-duration='1000'>
                 <form className={style.form} onSubmit={sendEmail}>
                     <input 
                         type="text" 
@@ -112,14 +113,14 @@ export default function Contact() {
                         placeholder='MESSAGE' 
                         required 
                     />
-                    {/* <ReCAPTCHA
+                    <ReCAPTCHA
                         sitekey="process.env.REACT_APP_RECAPTCHA_SITE_KEY"
                         onChange={handleCaptchaChange}
-                    /> */}
+                    />
                     <button type="submit" value="Send" disabled={isSubmitting}>Submit</button>
                     {stateMessage && <p>{stateMessage}</p>}
                 </form>
-            </div>
+            </div> */}
         </div>
     )
 }

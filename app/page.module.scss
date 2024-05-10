@@ -7,7 +7,7 @@
     margin-top: 570px;
 
     @media screen and (max-width: 640px) {
-        margin-top: 490px;
+        margin-top: 390px;
     }
 
     h2 {
@@ -119,6 +119,20 @@
                     }
                 }
             }
+        }
+    }
+
+    .photoBar {
+        height: 300px;
+        width: 100%;
+        background-image: url('../public/images/dogs/running.jpg');
+        background-position: 50% 60%;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        @media screen and (max-width: 640px) {
+            height: 200px;
+            background-size: 200%;
         }
     }
 
