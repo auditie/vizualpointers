@@ -25,6 +25,10 @@
     padding-top: 20px;
     margin-bottom: 210px;
 
+    @media screen and (max-width: 640px) {
+        margin-bottom: 190px;
+    }
+
     @include large-container;
 
     h3 {
