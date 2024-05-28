@@ -71,7 +71,7 @@ export default function Home() {
                 I asked their owner, Julia, what her favorite thing is about each of her dogs is:<br/><br/> 
                 <span className={styles.ownerQuote}>Blue - &quot;I love that he loves being wherever we are. We can be anywhere and he is just happy to be a part of everything we do! The way he looks at me for guidance is very special to me because it hsows how much our relationship has grown. He is the dog that got me into training!&quot;</span><br /><br />
                 <span className={styles.ownerQuote}>Laska - &quot;I love how patient and gentle she is. She has never growled or snapped at us even during uncomfortable moments like getting her nails trimmed and getting bathed. She isn&apos;t a velcro dog, but she is the one that wouldn&apos;t leave my side when I got home the few times I&apos;ve had to go out of town without her. She gives the best cuddles and just wants to be pet and hugged all the time!&quot;</span><br /><br /> 
-                I also have to highlight the fact that they have absolutely beautiful photos on their account! I love the composition and color in their photos! Blue and Laska also have the best hug pose! Can&apos;t recommend following their journey enough!
+                I also have to highlight the fact that they have absolutely beautiful photos on their account! I love the composition and color in their photos! Blue and Laska also have the best hug pose! Can&apos;t recommend following their account enough!
                 </p>
                 <div className={styles.profileSocials}>
                   <Link href="https://www.instagram.com/blueandlaska/" target="_blank" className={styles.instagramLogo}>

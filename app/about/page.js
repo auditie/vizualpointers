@@ -17,7 +17,7 @@ const AboutPage = () => {
         {title: 'TRICK DOG INTERMEDIATE - TKI', date: 'WIP'},
         {title: 'DOCK SENIOR - DS', date: '3/5 LEGS'},
         {title: 'DOCK MASTER - DM', date: '2/5 LEGS'},
-        {title: 'FASTCAT - BCAT', date: '144/150'},
+        {title: 'FASTCAT - BCAT', date: '145/150'},
     ]
 
     const billyAkcTitles = [
