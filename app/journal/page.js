@@ -15,6 +15,12 @@ export default function BlogPage() {
     }
     , []);
 
+    const sortedPosts = blogPosts.sort((a, b) => {
+        const dateA = new Date(a.date);
+        const dateB = new Date(b.date);
+        return dateB - dateA;
+      });
+
 
     return (
         <div id={style.blogPage}>
@@ -23,12 +29,12 @@ export default function BlogPage() {
             </div>
             <div className={style.blogIntro} data-aos='fade-up' data-aos-duration='1000'>
                 <p>
-                    <span className={style.introText}>THE JOURNAL, </span>
-                    to Vizual Pointers! We’re two pups living in Dallas, TX living with our two loving pawrents. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                    {/* <span className={style.introText}>THE JOURNAL, </span>  */}
+                    I'm no writer but I love documenting events and memories with the pups. I'm hoping this can be a space to share our travels, events, tips, tricks, and more. Social media is so limited on how much you can share. So hopefully you can get to know more about us and follow our pups and their journey closer! 
                 </p>
             </div>
             <div id={style.blogPosts} data-aos='fade-up' data-aos-duration='1000'>
-                {blogPosts.map((post, index) => {
+                {sortedPosts.map((post, index) => {
                     return (
                         <div className={style.post} key={post.journalId}>
                             {/* took out passHref from here, was getting a react issue */}

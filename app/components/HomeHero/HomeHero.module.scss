@@ -1,11 +1,25 @@
+@import '../../styles/colors.scss';
+@import '../../styles/typography.scss';
+@import '../../styles/vars.scss';
+@import '../../styles/mixins.scss';
+
 #heroImage {
     background-image: url('../../../public/images/heroimages/homepage.jpg');
     background-repeat: no-repeat;
     background-position: 30% 45%;
     background-size: cover;
-    height: 50vh;
+    height: 550px;
     width: 100%;
     z-index: 0;
     position: absolute;
     top: 0;
+
+    h1 {
+        position: absolute;
+        font-weight: 800;
+        font-size: 5rem !important;
+        bottom: 0;
+        color: white;
+        @include large-container;
+    }
 }

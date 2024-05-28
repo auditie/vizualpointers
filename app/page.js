@@ -38,9 +38,9 @@ export default function Home() {
   return (
     <div id={styles.homePage}>
       <HomeHero />
-        <div id={styles.intro} data-aos='fade-up' data-aos-duration='1000'>
-          <p><span className={styles.welcome}>WELCOME, </span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
-        </div>
+        {/* <div id={styles.intro} data-aos='fade-up' data-aos-duration='1000'>
+          <p className={styles.introduction}><span className={styles.welcome}>WELCOME, </span>This is our little corner of the internet to share more about our pups and their adventures!</p>
+        </div> */}
         <div>
           <div id={styles.recentPosts} data-aos='fade-up' data-aos-duration='1000'>
             <h2>RECENT JOURNALS</h2>
@@ -67,9 +67,8 @@ export default function Home() {
               <div className={styles.profileAbout}>
                 <h2>PROFILE HIGHLIGHT</h2>
                 <p>
-                <span className={styles.blueText}>BLUE & LASKA,</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-
-                Vulputate ut pharetra sit amet aliquam id. Duis ut diam quam nulla porttitor massa. Nam at lectus urna duis convallis convallis tellus id interdum. Eget lorem dolor sed viverra ipsum nunc aliquet. 
+                <span className={styles.blueText}>BLUE & LASKA,</span> Are some of the most adventurous pups I've ever seen! We've been following them for awhile and I just love their content. Blue is a GSP-Malamute + mix and Laska is a great Pyrenees. They live in Utah and are avid adventurers.<br /><br />
+                I also have to highlight the fact that they have absolutely beautiful photos on their account! I really love their use of composition and color in their photos! They also have the best hug pose in some of their photos lol. Can't recommend following their journey enough!
                 </p>
                 <div className={styles.profileSocials}>
                   <Link href="https://www.instagram.com/blueandlaska/" target="_blank" className={styles.instagramLogo}>
