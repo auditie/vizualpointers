@@ -22,7 +22,7 @@ export default function LinkBanner() {
             <Row className={style.linkRow}>
                 {links.map((link, index) => (
                     <Col key={index} className={style.linkCol}>
-                        <Link href={link.href} className={style.link}>
+                        <Link href={link.href} className={style.link} target="_blank">
                             {link.title}
                         </Link>
                     </Col>
