@@ -43,6 +43,10 @@
             &:hover {
                 color: $black;
             }
+
+            @media screen and (max-width: 640px) {
+                font-size: 2rem;
+            }
         }
 
         @media screen and (max-width: 895px) {
@@ -91,6 +95,10 @@
                 &:hover {
                     color: #242222;
                     cursor: pointer;
+                }
+
+                @media screen and (max-width: 640px) {
+                    font-size: 1.25rem;
                 }
             }
         }
