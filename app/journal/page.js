@@ -30,7 +30,7 @@ export default function BlogPage() {
             <div className={style.blogIntro} data-aos='fade-up' data-aos-duration='1000'>
                 <p>
                     {/* <span className={style.introText}>THE JOURNAL, </span>  */}
-                    I'm no writer but I love documenting events and memories with the pups. I'm hoping this can be a space to share our travels, events, tips, tricks, and more. Social media is so limited on how much you can share. So hopefully you can get to know more about us and follow our pups and their journey closer! 
+                    I&apos;m no writer but I love documenting events and memories with the pups. I&apos;m hoping this can be a space to share our travels, events, tips, tricks, and more. Social media is so limited on how much you can share. So hopefully you can get to know more about us and follow our pups and their journey closer! 
                 </p>
             </div>
             <div id={style.blogPosts} data-aos='fade-up' data-aos-duration='1000'>
