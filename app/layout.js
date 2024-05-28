@@ -33,20 +33,21 @@ export default function RootLayout({ children }) {
     {href: '/about', title: 'ABOUT'},
     {href: '/journal', title: 'JOURNAL'},
     {href:'/fun', title: 'FUN'},
-    {href: '/contact', title: 'CONTACT'}
+    // {href: '/contact', title: 'CONTACT'}
   ];
 
   const footerLinks = [
     {href: '/about', title: 'ABOUT'},
     {href: '/journal', title: 'JOURNAL'},
-    {href: '/contact', title: 'CONTACT'},
+    // {href: '/contact', title: 'CONTACT'},
     {href:'/fun', title: 'FAVORITES'},
+    {href:'/fun', title: 'PORTFOLIO'},
   ]
   const footerLinks2 = [
-    {href:'/fun', title: 'PORTFOLIO'},
-    {href: 'https://www.akc.org/', title: 'AKC'},
     {href: 'https://northamericadivingdogs.com/', title: 'NADD ORG'},
     {href: 'https://www.barnhunt.com/index.html', title: 'BARNHUNT'},
+    {href: 'https://www.akc.org/', title: 'AKC'},
+    {href: 'https://www.ukcdogs.com/', title: 'UKC'},
   ]
 
   return (

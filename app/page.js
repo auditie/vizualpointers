@@ -38,9 +38,9 @@ export default function Home() {
   return (
     <div id={styles.homePage}>
       <HomeHero />
-        <div id={styles.intro} data-aos='fade-up' data-aos-duration='1000'>
-          <p><span className={styles.welcome}>WELCOME, </span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
-        </div>
+        {/* <div id={styles.intro} data-aos='fade-up' data-aos-duration='1000'>
+          <p className={styles.introduction}><span className={styles.welcome}>WELCOME, </span>This is our little corner of the internet to share more about our pups and their adventures!</p>
+        </div> */}
         <div>
           <div id={styles.recentPosts} data-aos='fade-up' data-aos-duration='1000'>
             <h2>RECENT JOURNALS</h2>
@@ -57,8 +57,8 @@ export default function Home() {
             </div>
           </div>
         </div>
+        <div className={styles.photoBar} data-aos='fade-up' data-aos-duration='1000'></div>
         <div data-aos='fade-up' data-aos-duration='1000'>
-          <VideoLoop />
           <LinkBanner />
         </div>
         <div id={styles.profileHighlight} data-aos='fade-up' data-aos-duration='1000'>
@@ -67,9 +67,11 @@ export default function Home() {
               <div className={styles.profileAbout}>
                 <h2>PROFILE HIGHLIGHT</h2>
                 <p>
-                <span className={styles.blueText}>BLUE & LASKA,</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-
-                Vulputate ut pharetra sit amet aliquam id. Duis ut diam quam nulla porttitor massa. Nam at lectus urna duis convallis convallis tellus id interdum. Eget lorem dolor sed viverra ipsum nunc aliquet. 
+                <span className={styles.blueText}>BLUE & LASKA,</span> Are some of the most adventurous pups I&apos;ve ever seen! We&apos;ve been following them for awhile and I just love their content. Blue is a GSP-Malamute + mix and Laska is a great Pyrenees. They live in Utah and are avid travelers.<br /><br />
+                I asked their owner, Julia, what her favorite thing is about each of her dogs is:<br/><br/> 
+                <span className={styles.ownerQuote}>Blue - &quot;I love that he loves being wherever we are. We can be anywhere and he is just happy to be a part of everything we do! The way he looks at me for guidance is very special to me because it hsows how much our relationship has grown. He is the dog that got me into training!&quot;</span><br /><br />
+                <span className={styles.ownerQuote}>Laska - &quot;I love how patient and gentle she is. She has never growled or snapped at us even during uncomfortable moments like getting her nails trimmed and getting bathed. She isn&apos;t a velcro dog, but she is the one that wouldn&apos;t leave my side when I got home the few times I&apos;ve had to go out of town without her. She gives the best cuddles and just wants to be pet and hugged all the time!&quot;</span><br /><br /> 
+                I also have to highlight the fact that they have absolutely beautiful photos on their account! I love the composition and color in their photos! Blue and Laska also have the best hug pose! Can&apos;t recommend following their account enough!
                 </p>
                 <div className={styles.profileSocials}>
                   <Link href="https://www.instagram.com/blueandlaska/" target="_blank" className={styles.instagramLogo}>

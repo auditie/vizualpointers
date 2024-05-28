@@ -2,7 +2,11 @@
 @import '../styles/mixins.scss';
 
 #blogPage {
-    margin-bottom: 20vh;
+    margin-bottom: 10vh;
+
+    @media screen and (max-width: 640px) {
+        margin-bottom: auto;
+    }
     .blogHero {
         background-image: url('../../public/images/heroimages/blogpage-hero.jpg');
         background-repeat: no-repeat;

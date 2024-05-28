@@ -4,15 +4,16 @@
 @import './styles/mixins.scss';
 
 #homePage {
-    margin-top: 570px;
+    margin-top: 480px;
 
     @media screen and (max-width: 640px) {
-        margin-top: 490px;
+        margin-top: 435px;
     }
 
     h2 {
         font-size: 1.8rem;
     }
+
     .welcomeContainer {
         display: flex;
         flex-direction: row;
@@ -20,12 +21,12 @@
         font-optical-sizing: auto;
         @include large-container;
 
-        h1 {
-            margin-right: 20px;
-            font-size: 1.6rem;
-            display: inline;
-            font-weight: 400;
-        }
+        // h1 {
+        //     margin-right: 20px;
+        //     font-size: 1.6rem;
+        //     display: inline;
+        //     font-weight: 400;
+        // }
     }
 
     #intro {
@@ -41,7 +42,7 @@
         }
 
         p {
-            font-size: .85rem;
+            font-size: 1.4rem;
             margin: 0;
         }
     }
@@ -122,6 +123,20 @@
         }
     }
 
+    .photoBar {
+        height: 300px;
+        width: 100%;
+        background-image: url('../public/images/dogs/running.jpg');
+        background-position: 50% 60%;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        @media screen and (max-width: 640px) {
+            height: 200px;
+            background-size: 200%;
+        }
+    }
+
     #profileHighlight {
         border-top: 1.5px solid black;
 
@@ -156,13 +171,17 @@
                 }
 
                 .profileSocials {
+                    margin-top: 40px;
                     display: flex;
                     flex-direction: row;
 
                     a {
                         text-decoration: none;
                         color: black;
-                        font-size: .9rem;
+                        font-size: 1rem;
+                        text-transform: uppercase;
+                        font-weight: 600;
+                        line-height: .6rem;
 
                         &:hover {
                             color: $orange;
@@ -187,6 +206,11 @@
                     border-top: 1.5px solid black;
                     border-left: none;
                 }
+            }
+            .ownerQuote {
+                padding-left: 20px;
+                font-style: italic;
+                font-weight: 500;
             }
         }
 

@@ -17,13 +17,16 @@ const AboutPage = () => {
         {title: 'TRICK DOG INTERMEDIATE - TKI', date: 'WIP'},
         {title: 'DOCK SENIOR - DS', date: '3/5 LEGS'},
         {title: 'DOCK MASTER - DM', date: '2/5 LEGS'},
-        {title: 'FASTCAT - BCAT', date: 'WIP'},
+        {title: 'FASTCAT - BCAT', date: '145/150'},
     ]
 
     const billyAkcTitles = [
         {title: 'CHAMPION - CH', date: 'WIP'},
-        {title: 'TRICK DOG NOVICE - TKN', date: 'WIP'},
-        {title: 'CANINE GOOD CITIZEN - CGC', date: 'WIP'},
+        {title: 'TRICK DOG NOVICE - TKN', date: '5/17/24'},
+        {title: 'TRICK DOG INTERMEDIATE - TKI', date: '5/17/24'},
+        {title: 'CANINE GOOD CITIZEN - CGC', date: '5/17/24'},
+        {title: 'ADVANCED CGC - CGCA', date: '5/17/24'},
+        {title: 'URBAN CANINE GOOD CITIZEN - CGCU', date: '5/17/24'},
         {title: 'VIRTUAL HOME MANNERS PUPPY - VHMP', date: 'WIP'},
         {title: 'VIRTUAL HOME MANNERS - VHMA', date: 'WIP'},
     ]
@@ -55,7 +58,7 @@ const AboutPage = () => {
                         <p>
                             <span className={style.introText}>VIZUAL POINTERS, </span>is my way of documenting our life with our two dogs, Peach and Billy. We are a small family of 4. We love to travel, train, and compete with our dogs. We are located in Dallas, TX and love to explore the city and surrounding areas with our dogs.
                             <br /> <br />
-                            Me and my husband are both originally from Northern Utah. We moved to Texas for the summer of 2021 and fell in love with state. That Fall we decided to get our first dog, Peach! We had friends with Vizslas and knew we loved the breed and wanted to get one of our own. After 1 1/2 with Miss Peach we decided to get another dog, and we knew we needed a dog that could keep up with her drive and energy. Then in September of 2023 Billy joined our family!
+                            My husband and I are both originally from Northern Utah. We moved to Texas for the summer of 2021 and fell in love with the state. That Fall we decided to get our first dog, Peach! We had friends with Vizslas and knew we loved the breed and wanted to get one of our own. After a year and a half with Miss Peach we decided to get another dog, and knew we needed a dog that could keep up with her drive and energy. In September of 2023 Billy joined our family!
                             <br /> <br />
                             We enjoy hiking, running, and dog sports. We are always looking for new things to try with our dogs and love to share the journey!
                         </p>
@@ -69,7 +72,7 @@ const AboutPage = () => {
                             <span className={style.introText}>MISS SWEET PEACH, </span>
                             is a 2 year old Vizsla. She was born November 2, 2021 in Rockport, TX. Peach was a wild puppy, and we learned what it’s really like to have a high energy dog. Thanks to Peach we found our love for dog sports. We’ve tried agility, dock diving, barnhunt, and now fastCAT! 
                             <br /> <br />
-                            Peach has a really high working drive, she loves to train, and loves to be as close to as as possible on the couch. She also has a spicy personality and is so fun to be around!
+                            Peach has a really high working drive, she loves to train, and loves to chill with us on the couch. She can have a spicy personality and is so much fun to be around!
                         </p>
                         <div className={style.peachTitles} data-aos="fade-right" data-aos-duration='1000'>
                             <h3 className={style.akcHeader}>AKC TITLES</h3>

@@ -25,6 +25,10 @@
     padding-top: 20px;
     margin-bottom: 210px;
 
+    @media screen and (max-width: 640px) {
+        margin-bottom: 190px;
+    }
+
     @include large-container;
 
     h3 {
@@ -38,6 +42,10 @@
 
             &:hover {
                 color: $black;
+            }
+
+            @media screen and (max-width: 640px) {
+                font-size: 2rem;
             }
         }
 
@@ -87,6 +95,10 @@
                 &:hover {
                     color: #242222;
                     cursor: pointer;
+                }
+
+                @media screen and (max-width: 640px) {
+                    font-size: 1.25rem;
                 }
             }
         }
@@ -150,6 +162,7 @@ footer {
                         color: white;
                         text-decoration: none;
                         font-weight: 600;
+                        font-size: 0.8rem;
                         &:hover {
                             color: $black;
                         
