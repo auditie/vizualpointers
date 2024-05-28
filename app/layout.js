@@ -18,8 +18,8 @@ const inter = Inter({ subsets: ['latin'] })
 import logo from '../public/images/logos/vizualpointers-logo.svg';
 
 export const metadata = {
-  title: 'vizual pointers',
-  description: 'home site for vizual pointers',
+  title: 'VIZUAL POINTERS',
+  description: 'HOME OF VIZUAL POINTERS',
 }
 
 export default function RootLayout({ children }) {
